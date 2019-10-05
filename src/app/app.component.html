@@ -1,0 +1,22 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Easy animations
+</p>
+
+<h2>*ngFor</h2>
+
+<div class="item" *ngFor="let item of list; let i = index" @revealer>
+    <div>{{item + (i+ 1)}}</div>
+</div>
+
+<button style="margin-top: 50px;" (click) = 'addItem()'>Add</button>
+<button  (click)='removeItem()'>Remove</button>
+
+<h2>*ngIf</h2>
+
+<div style="background-color: yellow" *ngIf="shown" @revealer>
+  <div style="padding: 10px;">
+      I'm a conditional block of text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam tempora voluptatum hic accusamus ipsum a, odit libero officia placeat culpa harum consequuntur animi. Labore doloribus soluta veniam ex animi molestiae?
+    </div>
+</div>
+<button (click)="toggleItem()">Toggle</button>
